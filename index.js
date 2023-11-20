@@ -23,6 +23,8 @@ app.use(express.static(publicPath))
 
 //Routes...
 app.use('/api/auth', require('./routes/auth'))
+app.use('/api/users', require('./routes/user'))
+app.use('/api/messages', require('./routes/messajes'))
 
 const port = process.env.PORT
 server.listen(port, () => console.log(`Example app listening on port ${port}!`))
